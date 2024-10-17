@@ -48,25 +48,12 @@ model3=pickle.load(open('model3.pkl','rb'))
 
 #banruptcy classification
 def bankruptcy_classification(input_data):
-  classifications=[]
   input_array=np.asarray(input_data).reshape(1,-1)
 
   classification=model1.predict(input_array)
-  classifications.append(classification[0])
+  
 
-  #classification1=model2.predict(input_array)
-  #classifications.append(classification1[0])
-
-  classification2=model3.predict(input_array)
-  classifications.append(classification2[0])
-
-  from collections import counter
-
-  count_values=counter(classification)
-
-  most_common_value,highest_count = count_values.most_common(1)[0]
-
-  if (most_common_value==0):
+  if (classification==0):
     return 'the bank is not in the risk of bankruptcy'
   else:
     return 'the bank is in the risk of bankruptcy'
@@ -84,7 +71,7 @@ def bankruptcy_classification(input_data):
 
   risk_precent=[round(min(risk)*100,2),round(max(risk)*100,2)]
 
-  if (most_common_value==0):
+  if (classification==0):
     return f'the probability of bank is not in the risk of bankruptcy is between{risk_percent[0]} and {risk_percent[1]}'
   else:
     return f'the probability of the bank is in the risk of bankruptcy is between{risk_percent[0]} and {risk_percent[1]}'
