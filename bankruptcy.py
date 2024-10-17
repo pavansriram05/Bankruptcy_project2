@@ -43,7 +43,7 @@ st.write(f"the net income of total assets")
 
 #load models
 model1=pickle.load(open('model1.pkl','rb'))
-model2=pickle.load(open('model2.pkl','rb'))
+model2=pickle.load(open('model2(1).pkl','rb'))
 model3=pickle.load(open('model3.pkl','rb'))
 
 #banruptcy classification
