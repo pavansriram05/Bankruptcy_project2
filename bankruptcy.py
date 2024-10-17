@@ -20,11 +20,11 @@ st.title(" ________________________________ Bankruptcy classification :Bank:") #
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 #inputs
-ROA(A) == st.number_input('ROA(A) before interest and % after tax',min_value = 0.0,max_value = 1.0,value = 0.000000,format ="%.6f")
+ROA_A == st.number_input('ROA(A) before interest and % after tax',min_value = 0.0,max_value = 1.0,value = 0.000000,format ="%.6f")
 st.write(f"value before interest and %  afetr tax")
-ROA(B) == st.number_input('ROA(B) before interest and depreciation after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA_B == st.number_input('ROA(B) before interest and depreciation after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and depreciation after tax")
-ROA(C) == st.number_input('ROA(C) before interest and depreciation before interest',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA_C == st.number_input('ROA(C) before interest and depreciation before interest',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and depreciation before interest")
 EPS == st.number_input('persistent EPS in the last four seasons',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value of the EPS for the last four seasons")
@@ -91,7 +91,7 @@ def bankruptcy_classification(input_data):
 
 
 #create input data for classification
-input_data= [ROA(C),ROA(A),ROA(B),EPS,Net_profit_share,debt_ratio,net_worth,net_profit,retained_earnings,net_income]
+input_data= [ROA_C,ROA_A,ROA_B,EPS,Net_profit_share,debt_ratio,net_worth,net_profit,retained_earnings,net_income]
 
 #classification
 if st.button("Bankruptcy"):
