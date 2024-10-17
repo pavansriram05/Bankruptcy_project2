@@ -20,9 +20,9 @@ st.title(" ________________________________ Bankruptcy classification :Bank:") #
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 #inputs
-ROA(A) = st.number_input('ROA(A) before interest and % after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA(A)= st.number_input('ROA(A) before interest and % after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and %  afetr tax")
-ROA(B) = st.number_input('ROA(B) before interest and depreciation after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA(B)= st.number_input('ROA(B) before interest and depreciation after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and depreciation after tax")
 ROA(C)=st.number_input('ROA(C) before interest and depreciation before interest',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and depreciation before interest")
