@@ -62,7 +62,7 @@ def bankruptcy_classification(input_data):
   pred1=model1.predict_proba(input_data)
   risk.append(pred1[0])
 
-  risk_precent=print(round(risk)*100,2))
+  risk_precent=print(round(risk)*100,2)
 
   if (classification==0):
     return f'the probability of bank is not in the risk of bankruptcy is {risk_perent}'
