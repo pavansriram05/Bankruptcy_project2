@@ -20,13 +20,13 @@ st.title(" ________________________________ Bankruptcy classification :Bank:") #
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 #inputs
-ROA(A)= st.number_input('ROA(A) before interest and % after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA(A) = st.number_input('ROA(A) before interest and % after tax',min_value = 0.0,max_value = 1.0,value = 0.000000,format ="%.6f")
 st.write(f"value before interest and %  afetr tax")
-ROA(B)= st.number_input('ROA(B) before interest and depreciation after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA(B) = st.number_input('ROA(B) before interest and depreciation after tax',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and depreciation after tax")
-ROA(C)=st.number_input('ROA(C) before interest and depreciation before interest',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+ROA(C) = st.number_input('ROA(C) before interest and depreciation before interest',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value before interest and depreciation before interest")
-EPS=st.number_input('persistent EPS in the last four seasons',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
+EPS = st.number_input('persistent EPS in the last four seasons',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"value of the EPS for the last four seasons")
 Net_profit_share=st.number_input('Per share Net profit before tax(Yuan ¥)',min_value=0.0,max_value=1.0,value=0.000000,format="%.6f")
 st.write(f"the value of per share net profit before tax(in Yuan ¥)")
