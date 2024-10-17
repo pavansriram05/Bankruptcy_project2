@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 # User Interface
 st.set_page_config(page_title="Bankruptcy classification", page_icon=':bank:', layout='centered')# to name the tab where the application opens
 #st.markdown("""<style>.stApp {background-color: #808080;} </style>""", unsafe_allow_html=True) # This can be used to change the background color of the streamLit web app
-st.title(" ________________________________ Bankruptcy classification :Bank:") # giving title for the page inside it
+st.title(" ________________________________ Bankruptcy classification :bank:") # giving title for the page inside it
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 #inputs
@@ -60,14 +60,13 @@ def bankruptcy_classification(input_data):
 
 # finding out the risk percent
   pred1=model1.predict_proba(input_data)
-  risk.append(pred1[0])
-
+  risk = pred[:,1]
   risk_precent=print(round(risk)*100,2)
 
   if (classification==0):
-    return f'the probability of bank is not in the risk of bankruptcy is {risk_perent}'
+    return 'the probability of bank is not in the risk of bankruptcy is '+str(risk_perent)+' '
   else:
-    return f'the probability of the bank is in the risk of bankruptcy is {risk_percent}'
+    return 'the probability of the bank is in the risk of bankruptcy is'+ str(risk_percent)+' '
 
 
 #create input data for classification
