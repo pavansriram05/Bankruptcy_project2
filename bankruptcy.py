@@ -58,23 +58,16 @@ def bankruptcy_classification(input_data):
   else:
     return 'the bank is in the risk of bankruptcy'
 
-  risk=[]
-
+# finding out the risk percent
   pred1=model1.predict_proba(input_data)
   risk.append(pred1[0])
 
-  pred2=model2.predict_proba(input_data)
-  risk.append(pred2[0])
-
-  pred3=model3.predict_proba(input_data)
-  risk.append(pred3[0])
-
-  risk_precent=[round(min(risk)*100,2),round(max(risk)*100,2)]
+  risk_precent=print(round(risk)*100,2))
 
   if (classification==0):
-    return f'the probability of bank is not in the risk of bankruptcy is between{risk_percent[0]} and {risk_percent[1]}'
+    return f'the probability of bank is not in the risk of bankruptcy is {risk_perent}'
   else:
-    return f'the probability of the bank is in the risk of bankruptcy is between{risk_percent[0]} and {risk_percent[1]}'
+    return f'the probability of the bank is in the risk of bankruptcy is {risk_percent}'
 
 
 #create input data for classification
